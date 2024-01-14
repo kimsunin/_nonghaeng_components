@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Header from "@/components/Header";
-import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -13,7 +12,9 @@ export default function Home() {
           <h1>홈입니다</h1>
         </div>
       </main>
-      <footer id="footer"></footer>
+      <footer id="footer">
+        <Footer />
+      </footer>
     </div>
   );
 }

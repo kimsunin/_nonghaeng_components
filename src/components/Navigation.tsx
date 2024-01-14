@@ -22,7 +22,11 @@ export default function Navigation({ hrefProps }) {
         <div className="subMenu absolute left-2/4 mt-36 z-10">{subMenu}</div>
       </div>
       <div className="menu_bg w-full h-full">
-        <Image src={navigationBg} className="absolute h-48" />
+        <Image
+          src={navigationBg}
+          alt={"navigation_img"}
+          className="absolute h-48"
+        />
         <div className="bg-slate-300 absolute w-full h-8 mt-44"></div>
         <div className="bg-slate-500 absolute w-3/5 h-24 mt-28 right-0"></div>
       </div>

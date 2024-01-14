@@ -9,17 +9,14 @@ export default function Mypage() {
       <header id="header">
         <Header />
       </header>
-
       <nav id="nav">
         <Navigation hrefProps={mypageHref} />
       </nav>
-
       <main id="main">
         <div id="content">
           <h1>마이페이지 컴포넌트</h1>
         </div>
       </main>
-
       <footer id="footer">
         <Footer />
       </footer>
