@@ -8,7 +8,11 @@ export default function Home() {
       <header id="header">
         <Header />
       </header>
-      <main id="main"></main>
+      <main id="main">
+        <div className="mt-20">
+          <h1>홈입니다</h1>
+        </div>
+      </main>
       <footer id="footer"></footer>
     </div>
   );

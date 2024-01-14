@@ -16,7 +16,7 @@ export const headerHref = [
       { title: "여행1", href: "/pages/travel/child1" },
       { title: "여행2", href: "/pages/travel/child2" },
       { title: "여행3", href: "/pages/travel/child3" },
-      { title: "여행4", href: "/pages/travel/child3" },
+      { title: "여행4", href: "/pages/travel/child4" },
     ],
   },
   {
@@ -34,7 +34,7 @@ export const headerHref = [
       { title: "커뮤니티1", href: "/pages/community/child1" },
       { title: "커뮤니티2", href: "/pages/community/child2" },
       { title: "커뮤니티3", href: "/pages/community/child3" },
-      { title: "커뮤니티4", href: "/pages/community/child3" },
+      { title: "커뮤니티4", href: "/pages/community/child4" },
     ],
   },
 ];
