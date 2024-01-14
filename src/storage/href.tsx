@@ -79,6 +79,7 @@ export const communityHref = {
 
 export const sitemapHref = {
   mainMenu: { href: "/pages/sitemap", title: "사이트맵" },
+  subMenu: [{ href: "/pages/sitemap", title: "사이트맵" }],
 };
 
 export const mypageHref = {

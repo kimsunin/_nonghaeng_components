@@ -9,17 +9,14 @@ export default function community() {
       <header id="header">
         <Header />
       </header>
-      <hr />
       <nav id="nav">
         <Navigation hrefProps={communityHref} />
       </nav>
-      <hr />
       <main id="main">
         <div id="content">
           <h1>커뮤니티 컴포넌트</h1>
         </div>
       </main>
-      <hr />
       <footer id="footer">
         <Footer />
       </footer>
