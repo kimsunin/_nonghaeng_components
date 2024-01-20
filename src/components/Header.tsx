@@ -75,11 +75,11 @@ export default function Header() {
       </div>
       <div className="header_menu2 flex p-8 text-xs font-light">
         {isLogin && (
-          <Link href="pages/mypage/login" className="px-3">
+          <Link href="pages/mypage/login" className="px-3 hover:text-[#FF7A00]">
             로그인
           </Link>
         )}
-        <Link href="/pages/mypage" className="px-3">
+        <Link href="/pages/mypage" className="px-3 hover:text-[#FF7A00]">
           마이페이지
         </Link>
         <Link href="/sitemap" className="px-3">
