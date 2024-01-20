@@ -16,7 +16,7 @@ export default function IntroduceChild3() {
 
       <main id="main">
         <div id="content">
-          <h1>소개 자식4 컴포넌트</h1>
+          <h1>소개 자식3 컴포넌트</h1>
         </div>
       </main>
 

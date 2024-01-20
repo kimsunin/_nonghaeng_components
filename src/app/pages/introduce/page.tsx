@@ -9,17 +9,14 @@ export default function Introduce() {
       <header id="header">
         <Header />
       </header>
-
       <nav id="nav">
         <Navigation hrefProps={introduceHref} />
       </nav>
-
       <main id="main">
         <div id="content">
           <h1>소개 컴포넌트</h1>
         </div>
       </main>
-
       <footer id="footer">
         <Footer />
       </footer>
