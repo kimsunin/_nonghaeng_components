@@ -12,7 +12,7 @@ export default function Footer() {
     <div className="footer_inner w-10/12 mx-auto h-full">
       <hr className="absolute border-black left-0 w-full mt-16  " />
       <div className="footer_link h-32 ">
-        <div className="subLink  h-16"></div>
+        <div className="subLink h-16"></div>
         <div className="siteLink h-16 mt-5">{siteLinks}</div>
       </div>
       <div className="information h-20">사업자 소개</div>

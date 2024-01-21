@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CheckBox from "@/components/CheckBox";
 
 export default function Home() {
   return (
@@ -8,9 +9,14 @@ export default function Home() {
         <Header />
       </header>
       <main id="main">
-        <div className="mt-20">
-          <h1>홈입니다</h1>
-        </div>
+        <section className="mt-20 bg-slate-400 w-full h-main_section1">
+          <div className="mx-auto w-5/6 h-full">
+            <div className="absolute bg-[#FFC83B]/80 w-5/6 h-28 bottom-36 rounded-[3px]">
+              <CheckBox />
+            </div>
+          </div>
+        </section>
+        <section className="bg-slate-600 w-5/6 h-main_section2 mx-auto"></section>
       </main>
       <footer id="footer">
         <Footer />
