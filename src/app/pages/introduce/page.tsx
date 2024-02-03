@@ -14,7 +14,7 @@ export default function Introduce() {
       </nav>
       <main id="main">
         <div id="content">
-          <h1>소개 컴포넌트</h1>
+          <h1>농행동행 컴포넌트</h1>
         </div>
       </main>
       <footer id="footer">

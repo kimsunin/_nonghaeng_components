@@ -4,71 +4,66 @@ export const headerHref = [
     title: "농행동행",
     href: "/pages/introduce",
     subMenu: [
-      { title: "농행동행", href: "/pages/introduce/child1" },
-      { title: "농촌관광 소개", href: "/pages/introduce/child2" },
+      { title: "농행동행 소개", href: "/pages/introduce/nongdong" },
+      { title: "농촌관광 소개", href: "/pages/introduce/tour" },
     ],
   },
   {
     title: "농촌여행",
-    href: "/pages/travel",
+    href: "/pages/trip",
     subMenu: [
-      { title: "농촌관광", href: "/pages/travel/child1" },
-      { title: "농촌체험", href: "/pages/travel/child2" },
-      { title: "농촌숙박", href: "/pages/travel/child3" },
-      { title: "농촌힐링", href: "/pages/travel/child4" },
+      { title: "농촌관광", href: "/pages/trip/tour" },
+      { title: "농촌체험", href: "/pages/trip/experience" },
+      { title: "농촌숙박", href: "/pages/trip/lodgment" },
+      { title: "농촌힐링", href: "/pages/trip/healing" },
     ],
   },
   {
     title: "기획상품",
-    href: "/pages/plan",
+    href: "/pages/item",
     subMenu: [],
   },
   {
     title: "커뮤니티",
     href: "/pages/community",
     subMenu: [
-      { title: "공지사항", href: "/pages/community/child1" },
-      { title: "노행후기", href: "/pages/community/child2" },
-      { title: "고객문의", href: "/pages/community/child3" },
+      { title: "공지사항", href: "/pages/community/notification" },
+      { title: "노행후기", href: "/pages/community/review" },
+      { title: "고객문의", href: "/pages/community/inquiry" },
     ],
   },
 ];
 
 //navigation href
 export const introduceHref = {
-  mainMenu: { href: "/pages/introduce", title: "소개" },
+  mainMenu: { href: "/pages/introduce", title: "농행동행" },
   subMenu: [
-    { href: "/pages/introduce/child1", title: "소개1" },
-    { href: "/pages/introduce/child2", title: "소개2" },
-    { href: "/pages/introduce/child3", title: "소개3" },
+    { href: "/pages/introduce/nongdong", title: "농행동행 소개" },
+    { href: "/pages/introduce/tour", title: "농촌관광 소개" },
   ],
 };
 
-export const travelHref = {
-  mainMenu: { href: "/pages/travel", title: "여행" },
+export const tripHref = {
+  mainMenu: { href: "/pages/trip", title: "농촌여행" },
   subMenu: [
-    { href: "/pages/travel/child1", title: "여행1" },
-    { href: "/pages/travel/child2", title: "여행2" },
-    { href: "/pages/travel/child3", title: "여행3" },
-    { href: "/pages/travel/child4", title: "여행4" },
+    { href: "/pages/trip/tour", title: "농촌관광" },
+    { href: "/pages/trip/experience", title: "농촌체험" },
+    { href: "/pages/trip/lodgment", title: "농촌숙박" },
+    { href: "/pages/trip/healing", title: "농촌힐링" },
   ],
 };
 
-export const planHref = {
-  mainMenu: { href: "/pages/plan", title: "기획" },
-  subMenu: [
-    { href: "/pages/plan/child1", title: "기획1" },
-    { href: "/pages/plan/child2", title: "기획2" },
-  ],
+export const itemHref = {
+  mainMenu: { href: "/pages/item", title: "기획상품" },
+  subMenu: [],
 };
 
 export const communityHref = {
   mainMenu: { href: "/pages/community", title: "커뮤니티" },
   subMenu: [
-    { href: "/pages/community/child1", title: "커뮤니티1" },
-    { href: "/pages/community/child2", title: "커뮤니티2" },
-    { href: "/pages/community/child3", title: "커뮤니티3" },
-    { href: "/pages/community/child4", title: "커뮤니티4" },
+    { href: "/pages/community/notification", title: "공지사항" },
+    { href: "/pages/community/review", title: "노행후기" },
+    { href: "/pages/community/inquiry", title: "고객문의" },
   ],
 };
 
@@ -77,13 +72,24 @@ export const sitemapHref = {
   subMenu: [{ href: "/pages/sitemap", title: "사이트맵" }],
 };
 
-export const mypageHref = {
+export const isLoginHref = {
   mainMenu: { href: "/pages/mypage", title: "마이페이지" },
   subMenu: [
-    { href: "/pages/mypage/child1", title: "마이페이지1" },
-    { href: "/pages/mypage/child2", title: "마이페이지2" },
-    { href: "/pages/mypage/child3", title: "마이페이지3" },
-    { href: "/pages/mypage/child4", title: "마이페이지4" },
+    { href: "/pages/mypage/reservation", title: "나의예약" },
+    { href: "/pages/mypage/writing", title: "나의 작성글" },
+    { href: "/pages/mypage/coupon", title: "나의 쿠폰" },
+    { href: "/pages/mypage/item", title: "관심상품" },
+    { href: "/pages/mypage/edit", title: "회원정보수정" },
+  ],
+};
+
+export const unLoginHref = {
+  mainMenu: { href: "/pages/mypage/unlogin/login", title: "마이페이지" },
+  subMenu: [
+    { href: "/pages/mypage/unlogin/login", title: "로그인" },
+    { href: "/pages/mypage/unlogin/join", title: "회원가입" },
+    { href: "/pages/mypage/unlogin/findid", title: "아이디칮기" },
+    { href: "/pages/mypage/unlogin/findpass", title: "비밀번호찾기" },
   ],
 };
 

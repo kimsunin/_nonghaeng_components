@@ -36,7 +36,7 @@
 }
 
 #nav {
-  height: 208px;
+  height: 250px;
   background: rgb(226 232 240);
   margin-top: 80px;
 }
@@ -46,7 +46,7 @@
   height: 2200px;
 }
 #content {
-  width: 66.666667%;
+  width: 83.333333%;
   height: 100%;
   background: rgb(226 232 240);
   margin: 0 auto;

@@ -13,14 +13,20 @@ export default function Home() {
   const list1 = travel
     .filter((item) => item < 5)
     .map((item, index) => (
-      <div key={index} className="bg-slate-300 w-[200px] h-[200px] ">
+      <div
+        key={index}
+        className="bg-slate-300 w-[200px] h-[200px] rounded-[30px]"
+      >
         {item}
       </div>
     ));
   const list2 = travel
     .filter((item) => item > 4)
     .map((item, index) => (
-      <div key={index} className="bg-slate-300 w-[200px] h-[200px] ">
+      <div
+        key={index}
+        className="bg-slate-300 w-[200px] h-[200px] rounded-[30px]"
+      >
         {item}
       </div>
     ));
@@ -49,7 +55,7 @@ export default function Home() {
               <p />더 편안한 여행계획을 만드는 똑똑한 플랫폼
             </h2>
             <Link
-              href="pages//introdce"
+              href="pages//introduce"
               className="absolute bottom-80 bg-[#FF7A00] flex h-[35px] w-[200px] rounded-full items-center"
             >
               <h1 className="px-[20px] text-white">농행동행 알아보기</h1>

@@ -10,4 +10,4 @@ export const region = [
   "충청",
 ];
 
-export const category = ["체험", "숙박", "관광"];
+export const category = ["관광", "체험", "숙박", "힐링"];

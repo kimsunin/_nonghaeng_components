@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { headerHref } from "@/storage/href";
 import Image from "next/image";
 import home from "../storage/img/home.png";
@@ -8,19 +9,28 @@ import search from "../storage/img/search.png";
 import menu from "../storage/img/menu.png";
 
 export default function Header() {
-  const isLogin = true;
+  const router = useRouter();
+  const [isLogin, setIsLogin] = useState(true);
 
   const [isHover, setIsHover] = useState(false);
-
   function mouseOver() {
     setIsHover(true);
-    console.log("mouseOver");
   }
-
   function mouseLeave() {
     setIsHover(false);
-    console.log("mouseLeave");
   }
+
+  const [search_word, setSearch_word] = useState("");
+  const onChange = (e) => {
+    setSearch_word(e.target.value);
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (search_word == "") {
+      alert("검색어를 입력해주세요");
+    } else router.push(`/pages/search?search_word=${search_word}`);
+  };
 
   const subMenuLinks = (subMenu) => (
     <ul
@@ -28,9 +38,9 @@ export default function Header() {
         isHover ? "h-52" : "h-0"
       }`}
     >
-      {subMenu.map((subItem, subIndex) => (
-        <li key={subIndex} className="pt-4 text-white">
-          <Link href={subItem.href}>{subItem.title}</Link>
+      {subMenu.map((item, index) => (
+        <li key={index} className="pt-4 text-white">
+          <Link href={item.href}>{item.title}</Link>
         </li>
       ))}
     </ul>
@@ -62,27 +72,41 @@ export default function Header() {
       >
         <ul className="mainMenu flex">{mainMenuLinks}</ul>
       </nav>
-      <div className="header_search border-slate-500 border rounded-full w-64 m-5">
-        <form className="h-full p-1">
+      <div className="header_search border-slate-500 border shadow-md rounded-full w-64 m-5">
+        <form className="h-full p-1" onSubmit={handleSearch}>
           <input
             className="border-black rounded-full w-52 h-full"
             placeholder="  알고 싶은 정보를 검색해보세요"
+            onChange={onChange}
           ></input>
-          <button className="absolute px-2 py-1">
+          <button className="absolute px-2 py-1" type="submit">
             <Image src={search} alt="search" className="h-full w-5" />
           </button>
         </form>
       </div>
       <div className="header_menu2 flex p-8 text-xs font-light">
-        {isLogin && (
-          <Link href="pages/mypage/login" className="px-3 hover:text-[#FF7A00]">
+        {isLogin ? (
+          <button
+            className="px-3 hover:text-[#FF7A00]"
+            onClick={() => setIsLogin(false)}
+          >
+            로그아웃
+          </button>
+        ) : (
+          <Link
+            href="/pages/mypage/unlogin/login"
+            className="px-3 hover:text-[#FF7A00]"
+          >
             로그인
           </Link>
         )}
-        <Link href="/pages/mypage" className="px-3 hover:text-[#FF7A00]">
+        <Link
+          href={isLogin ? "/pages/mypage" : "/pages/mypage/unlogin/login"}
+          className="px-3 hover:text-[#FF7A00]"
+        >
           마이페이지
         </Link>
-        <Link href="/sitemap" className="px-3">
+        <Link href="/pages/sitemap" className="px-3">
           <Image src={menu} alt="menu" className="w-6 h-full" />
         </Link>
       </div>
