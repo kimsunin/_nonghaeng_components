@@ -10,8 +10,9 @@ import more1 from "../storage/img/home/more1.png";
 
 export default function Home() {
   const travel = [1, 2, 3, 4, 5, 6, 7, 8];
+
   const list1 = travel
-    .filter((item) => item < 5)
+    .filter((index) => index < 5)
     .map((item, index) => (
       <div
         key={index}
@@ -21,7 +22,7 @@ export default function Home() {
       </div>
     ));
   const list2 = travel
-    .filter((item) => item > 4)
+    .filter((index) => index > 4)
     .map((item, index) => (
       <div
         key={index}
@@ -41,6 +42,7 @@ export default function Home() {
           <Image
             src={section1_img}
             alt="section1_img"
+            priority={false}
             className="w-full h-full"
           />
           <div className="mx-auto w-5/6 h-full">
@@ -56,29 +58,31 @@ export default function Home() {
             </h2>
             <Link
               href="pages//introduce"
-              className="absolute bottom-80 bg-[#FF7A00] flex h-[35px] w-[200px] rounded-full items-center"
+              className="absolute top-[360px] bg-[#FF7A00] flex h-[35px] w-[200px] rounded-full items-center"
             >
               <h1 className="px-[20px] text-white">농행동행 알아보기</h1>
               <Image
                 src={more1}
                 alt="more_information"
+                priority={false}
                 className="w-[22px] h-[9px]"
               />
             </Link>
             <CheckBox />
           </div>
         </section>
-        <section className="w-5/6 h-[500px] mt-[150px] mx-auto">
+        <section className="w-5/6 h-[500px] mt-[100px] mx-auto">
           <div className="w-full h-[60px] flex justify-between items-center">
             <h1 className="text-[25px]">우수 체험</h1>
             <Link
-              href="/pages/travel/child2"
+              href="/pages/trip/experience"
               className="text-[#82BF00] items-center flex"
             >
               더 많은 농촌체험 보러가기
               <Image
                 src={more2}
                 alt="more_information"
+                priority={false}
                 className="ml-4 w-[9px] h-[14px]"
               />
             </Link>
@@ -92,13 +96,14 @@ export default function Home() {
           <div className="w-full h-[60px] flex justify-between items-center">
             <h1 className="text-[25px]">우수 숙박</h1>
             <Link
-              href="/pages/travel/child3"
+              href="/pages/trip/lodgment"
               className="text-[#82BF00] items-center flex"
             >
               더 많은 농촌숙박 보러가기
               <Image
                 src={more2}
                 alt="more_information"
+                priority={false}
                 className="ml-4 w-[9px] h-[14px]"
               />
             </Link>
@@ -112,11 +117,15 @@ export default function Home() {
           <div className="w-[450px] h-full">
             <div className="w-full h-[60px] flex justify-between items-center">
               <h1 className="text-[25px]">공지사항</h1>
-              <Link href="/" className="text-[#FF7A00] items-center flex">
+              <Link
+                href="/pages/community/notification"
+                className="text-[#FF7A00] items-center flex"
+              >
                 MORE
                 <Image
                   src={more3}
                   alt="more_information"
+                  priority={false}
                   className="ml-4 w-[9px] h-[14px]"
                 />
               </Link>
@@ -126,11 +135,15 @@ export default function Home() {
           <div className="w-[450px] h-full">
             <div className="w-full h-[60px] flex justify-between items-center">
               <h1 className="text-[25px]">농행후기</h1>
-              <Link href="/" className="text-[#FF7A00] items-center flex">
+              <Link
+                href="/pages/community/review"
+                className="text-[#FF7A00] items-center flex"
+              >
                 MORE
                 <Image
                   src={more3}
                   alt="more_information"
+                  priority={false}
                   className="ml-4 w-[9px] h-[14px]"
                 />
               </Link>

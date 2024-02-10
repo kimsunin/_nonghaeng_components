@@ -83,7 +83,7 @@ export default function CheckBox() {
   ));
 
   return (
-    <div className="main_search absolute bg-[#FFC83B]/80 w-5/6 h-28 bottom-20 rounded-[3px]">
+    <div className="main_search absolute bg-[#FFC83B]/80 w-5/6 h-28 bottom-[160px] rounded-[3px]">
       <form
         className="mx-auto w-5/6 h-full flex items-center justify-between"
         onSubmit={handleSearch}
@@ -103,6 +103,7 @@ export default function CheckBox() {
             <Image
               src={isClick.region ? click_true : click_false}
               alt="select_img"
+              priority={false}
               className="my-2 mr-4 w-[20px] h-[10px]"
             />
           </div>
@@ -129,6 +130,7 @@ export default function CheckBox() {
             <Image
               src={isClick.category ? click_true : click_false}
               alt="select_img"
+              priority={false}
               className="my-2 mr-4 w-[20px] h-[10px]"
             />
           </div>
@@ -142,8 +144,8 @@ export default function CheckBox() {
         </div>
         <div className="w-88 h-12 flex">
           <input
-            className="w-60 h-full rounded-[5px]"
-            placeholder="  검색어를 입력해보세요."
+            className="w-60 h-full px-[10px] rounded-[5px]"
+            placeholder="검색어를 입력해보세요."
             onChange={onChange}
           ></input>
           <button
@@ -151,7 +153,12 @@ export default function CheckBox() {
             type="submit"
           >
             <h1 className="text-white p-3">검색</h1>
-            <Image src={search} alt="search" className="w-5 pt-3" />
+            <Image
+              src={search}
+              alt="search"
+              priority={false}
+              className="w-5 pt-3"
+            />
           </button>
         </div>
       </form>

@@ -14,7 +14,9 @@ export default function Plan() {
       </nav>
       <main id="main">
         <div id="content">
-          <h1>기획상품 컴포넌트</h1>
+          <p className="bg-[#FF9C40] w-[200px] h-[40px] p-[8px] mx-auto mt-[100px] rounded-full text-center">
+            기획중입니다...
+          </p>
         </div>
       </main>
       <footer id="footer">

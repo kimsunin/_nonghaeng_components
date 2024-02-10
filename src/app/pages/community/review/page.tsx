@@ -14,7 +14,7 @@ export default function community() {
       </nav>
       <main id="main">
         <div id="content">
-          <h1>노행후기 컴포넌트</h1>
+          <h1>농행후기 컴포넌트</h1>
         </div>
       </main>
       <footer id="footer">

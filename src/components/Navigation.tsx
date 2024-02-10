@@ -1,12 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
-import navigationBg from "../storage/img/navigationBg.jpg";
 
 export default function Navigation({ hrefProps }) {
   const mainMenuItem = hrefProps.mainMenu;
   const subMenuItem = hrefProps.subMenu;
   const subMenu = subMenuItem.map((item, index) => (
-    <li className="py-[8px] px-[25px] text-white">
+    <li className="py-[8px] text-white">
       <Link key={index} href={item.href}>
         {item.title}
       </Link>
@@ -25,7 +23,7 @@ export default function Navigation({ hrefProps }) {
             {mainMenuItem.title}
           </Link>
         </div>
-        <ul className="subMenu absolute left-1/2 mt-[190px] z-10 flex">
+        <ul className="subMenu w-1/2 left-1/2 absolute mt-[190px] z-10 pl-[20px] pr-[125px] flex justify-between">
           {subMenu}
         </ul>
       </div>

@@ -10,7 +10,17 @@ import menu from "../storage/img/menu.png";
 
 export default function Header() {
   const router = useRouter();
-  const [isLogin, setIsLogin] = useState(true);
+
+  const [isLogin, setIsLogin] = useState(
+    JSON.parse(localStorage.getItem("LoginUser"))
+  );
+
+  const logout = () => {
+    localStorage.removeItem("LoginUser");
+    setIsLogin(false);
+    alert("logout");
+    router.push("/");
+  };
 
   const [isHover, setIsHover] = useState(false);
   function mouseOver() {
@@ -24,7 +34,6 @@ export default function Header() {
   const onChange = (e) => {
     setSearch_word(e.target.value);
   };
-
   const handleSearch = (e) => {
     e.preventDefault();
     if (search_word == "") {
@@ -45,7 +54,6 @@ export default function Header() {
       ))}
     </ul>
   );
-
   const mainMenuLinks = headerHref.map((mainItem, index) => (
     <li key={index} className="relative">
       <Link
@@ -59,10 +67,15 @@ export default function Header() {
   ));
 
   return (
-    <div className="header_inner h-full flex justify-between">
+    <div className="header_inner h-full shadow-md flex justify-between">
       <div className="header_logo p-6">
         <Link href="/">
-          <Image src={home} alt={"homeImage"} className="h-8 w-32" />
+          <Image
+            src={home}
+            alt="homeImage"
+            priority={false}
+            className="h-8 w-32"
+          />
         </Link>
       </div>
       <nav
@@ -70,49 +83,59 @@ export default function Header() {
         onMouseOver={mouseOver}
         onMouseLeave={mouseLeave}
       >
-        <ul className="mainMenu flex">{mainMenuLinks}</ul>
+        <ul className="mainMenu w-[400px] flex">{mainMenuLinks}</ul>
       </nav>
       <div className="header_search border-slate-500 border shadow-md rounded-full w-64 m-5">
-        <form className="h-full p-1" onSubmit={handleSearch}>
+        <form className="h-full p-1 flex" onSubmit={handleSearch}>
           <input
-            className="border-black rounded-full w-52 h-full"
-            placeholder="  알고 싶은 정보를 검색해보세요"
+            className="border-black rounded-full w-52 h-full px-[15px]"
+            placeholder="알고 싶은 정보가 있으세요?"
             onChange={onChange}
           ></input>
-          <button className="absolute px-2 py-1" type="submit">
-            <Image src={search} alt="search" className="h-full w-5" />
+          <button className="px-[4px]" type="submit">
+            <Image
+              src={search}
+              alt="search"
+              priority={false}
+              className="h-5 w-5"
+            />
           </button>
         </form>
       </div>
-      <div className="header_menu2 flex p-8 text-xs font-light">
+      <div className="header_menu2 flex pr-8 w-[200px] justify-between text-xs font-light">
         {isLogin ? (
-          <button
-            className="px-3 hover:text-[#FF7A00]"
-            onClick={() => setIsLogin(false)}
-          >
+          <button className=" hover:text-[#FF7A00] my-8" onClick={logout}>
             로그아웃
           </button>
         ) : (
           <Link
             href="/pages/mypage/unlogin/login"
-            className="px-3 hover:text-[#FF7A00]"
+            className=" hover:text-[#FF7A00] my-8"
           >
             로그인
           </Link>
         )}
         <Link
           href={isLogin ? "/pages/mypage" : "/pages/mypage/unlogin/login"}
-          className="px-3 hover:text-[#FF7A00]"
+          className="hover:text-[#FF7A00] my-8"
         >
           마이페이지
         </Link>
-        <Link href="/pages/sitemap" className="px-3">
-          <Image src={menu} alt="menu" className="w-6 h-full" />
+        <Link
+          href="/pages/sitemap"
+          className="hover:bg-[#FF7A00]/20 w-[40px] h-[40px] p-[12px] my-5 rounded-full"
+        >
+          <Image
+            src={menu}
+            alt="menu"
+            priority={false}
+            className="w-6 h-full"
+          />
         </Link>
       </div>
       <div
         className={`menu_bg bg-[#FF7A00]/80 absolute top-20 w-full overflow-hidden transition-all duration-500 ${
-          isHover ? "h-52" : "h-0"
+          isHover ? "h-[210px]" : "h-0"
         }`}
         onMouseOver={mouseOver}
         onMouseLeave={mouseLeave}

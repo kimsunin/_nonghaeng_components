@@ -28,7 +28,7 @@ export const headerHref = [
     href: "/pages/community",
     subMenu: [
       { title: "공지사항", href: "/pages/community/notification" },
-      { title: "노행후기", href: "/pages/community/review" },
+      { title: "농행후기", href: "/pages/community/review" },
       { title: "고객문의", href: "/pages/community/inquiry" },
     ],
   },
@@ -62,7 +62,7 @@ export const communityHref = {
   mainMenu: { href: "/pages/community", title: "커뮤니티" },
   subMenu: [
     { href: "/pages/community/notification", title: "공지사항" },
-    { href: "/pages/community/review", title: "노행후기" },
+    { href: "/pages/community/review", title: "농행후기" },
     { href: "/pages/community/inquiry", title: "고객문의" },
   ],
 };

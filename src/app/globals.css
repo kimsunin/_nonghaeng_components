@@ -43,12 +43,12 @@
 
 /* main */
 #main {
-  height: 2200px;
+  height: 2500px;
 }
 #content {
   width: 83.333333%;
   height: 100%;
-  background: rgb(226 232 240);
+  /* background: rgb(226 232 240); */
   margin: 0 auto;
 }
 
