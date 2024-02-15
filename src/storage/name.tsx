@@ -12,6 +12,8 @@ export const region = [
 
 export const category = ["관광", "체험", "숙박", "힐링"];
 
+export const emailAddress = ["naver.com", "gmail.com", "nate.com"];
+
 export const searchResult = [
   {
     title: "농촌관광",

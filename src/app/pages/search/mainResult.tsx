@@ -15,7 +15,7 @@ export default function MainResul({ result }) {
   const list = result.map((item, index) => (
     <>
       <p key={index} className="flex text-[#5A5550]">
-        <h1 className=" text-[25px]">{item.title}</h1>
+        <h1 className="text-[25px]">{item.title}</h1>
         <div className="bg-[#FF9C40] text-white m-[6px] text-center w-[40px] rounded-full">
           {item.contents.length}
         </div>

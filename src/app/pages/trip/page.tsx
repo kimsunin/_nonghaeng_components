@@ -1,14 +1,11 @@
-import Header from "@/components/Header";
+import Header from "@/components/header/Header";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { tripHref } from "@/storage/href";
 
 export default function Travel() {
   return (
-    <div id="wrap">
-      <header id="header">
-        <Header />
-      </header>
+    <>
       <nav id="nav">
         <Navigation hrefProps={tripHref} />
       </nav>
@@ -17,9 +14,6 @@ export default function Travel() {
           <h1>농촌여행 컴포넌트</h1>
         </div>
       </main>
-      <footer id="footer">
-        <Footer />
-      </footer>
-    </div>
+    </>
   );
 }

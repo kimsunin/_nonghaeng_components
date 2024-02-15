@@ -1,27 +1,26 @@
-import Header from "@/components/Header";
+"use client";
+import Header from "@/components/header/Header";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { isLoginHref } from "@/storage/href";
-import { unLoginHref } from "@/storage/href";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Mypage() {
-  const isLogin = true;
+  const [user, setUser] = useState();
+
+  // useEffect(() => axios.get(""));
+
   return (
-    <div id="wrap">
-      <header id="header">
-        <Header />
-      </header>
+    <>
       <nav id="nav">
-        <Navigation hrefProps={isLogin ? isLoginHref : unLoginHref} />
+        <Navigation hrefProps={isLoginHref} />
       </nav>
       <main id="main">
         <div id="content">
           <h1>마이페이지 컴포넌트</h1>
         </div>
       </main>
-      <footer id="footer">
-        <Footer />
-      </footer>
-    </div>
+    </>
   );
 }

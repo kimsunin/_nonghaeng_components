@@ -1,14 +1,11 @@
-import Header from "@/components/Header";
+import Header from "@/components/header/Header";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { sitemapHref } from "@/storage/href";
 
 export default function SiteMap() {
   return (
-    <div id="wrap">
-      <header id="header">
-        <Header />
-      </header>
+    <>
       <nav id="nav">
         <Navigation hrefProps={sitemapHref} />
       </nav>
@@ -17,9 +14,6 @@ export default function SiteMap() {
           <h1>사이트맵 컴포넌트</h1>
         </div>
       </main>
-      <footer id="footer">
-        <Footer />
-      </footer>
-    </div>
+    </>
   );
 }

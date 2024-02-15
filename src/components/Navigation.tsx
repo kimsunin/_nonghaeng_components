@@ -18,7 +18,7 @@ export default function Navigation({ hrefProps }) {
           <div className="bg-[#98CC28] w-[12px] my-[22px] h-[36px] rounded-full"></div>
           <Link
             href={mainMenuItem.href}
-            className="text-[#5A5550] py-[12px] pl-[16px] text-[36px] "
+            className="text-[#5A5550] py-[12px] pl-[16px] text-[36px] font-extrabold"
           >
             {mainMenuItem.title}
           </Link>

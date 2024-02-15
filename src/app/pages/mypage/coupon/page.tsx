@@ -1,14 +1,11 @@
-import Header from "@/components/Header";
+import Header from "@/components/header/Header";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { isLoginHref } from "@/storage/href";
 
 export default function Mypage() {
   return (
-    <div id="wrap">
-      <header id="header">
-        <Header />
-      </header>
+    <>
       <nav id="nav">
         <Navigation hrefProps={isLoginHref} />
       </nav>
@@ -17,9 +14,6 @@ export default function Mypage() {
           <h1>나의 쿠폰 컴포넌트</h1>
         </div>
       </main>
-      <footer id="footer">
-        <Footer />
-      </footer>
-    </div>
+    </>
   );
 }

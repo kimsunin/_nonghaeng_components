@@ -1,5 +1,5 @@
 "use client";
-import Header from "@/components/Header";
+import Header from "@/components/header/Header";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { tripHref } from "@/storage/href";
@@ -10,10 +10,7 @@ export default function Travel() {
   const region = searchParams.get("region");
   const search_word = searchParams.get("search_word");
   return (
-    <div id="wrap">
-      <header id="header">
-        <Header />
-      </header>
+    <>
       <nav id="nav">
         <Navigation hrefProps={tripHref} />
       </nav>
@@ -25,9 +22,6 @@ export default function Travel() {
           </h2>
         </div>
       </main>
-      <footer id="footer">
-        <Footer />
-      </footer>
-    </div>
+    </>
   );
 }

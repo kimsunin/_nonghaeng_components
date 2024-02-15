@@ -18,8 +18,6 @@ export default function CheckBox() {
       alert("지역을 선택해주세요");
     } else if (selectedItem.category == "카테고리 선택") {
       alert("카테고리를 선택해주세요");
-    } else if (selectedItem.search_word == "") {
-      alert("검색어를 입력해주세요");
     } else {
       router.push(
         `/pages/trip/${searchHref}?region=${selectedItem.region}&search_word=${selectedItem.search_word}`
