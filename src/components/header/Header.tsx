@@ -10,20 +10,25 @@ import search from "../../storage/img/search.png";
 import menu from "../../storage/img/menu.png";
 import axios from "axios";
 
-export default function Header() {
+export default function Header(token) {
   const router = useRouter();
 
   // 로그인 상태
-  const [accessToken, setAccessToken] = useState(
-    localStorage.getItem("accessToken")
-  );
+  // const [accessToken, setAccessToken] = useState(
+  //   localStorage.getItem("accessToken")
+  // );
+  const [accessToken, setAccessToken] = useState(token);
   const logout = () => {
     localStorage.removeItem("accessToken");
     setAccessToken(null);
   };
 
+  // 로그인 토큰 유효성 검사
   // useEffect(() => {
-  //   axios.get("");
+  // 서버에 토큰과 함께 get요청 -> 토큰이 유효하다는 답장을 받으면 아무것도 하지 않음,
+  // 토큰이 유효하지 않다는 답장을 받으면 localstorage에 저장되어 있던 refreshToken을 서버에 전달
+  // 서버로부터 새로운 토큰을 전달받으면 localstorage에 저장
+  // >>로그인 유지성공
   // });
 
   // 메뉴 호버
@@ -151,3 +156,11 @@ export default function Header() {
     </header>
   );
 }
+
+// 서버사이드 렌더링이 아닌 정적생성
+export function getStaticProps() {
+  const token = localStorage.getItem("accessToken");
+  return { props: { token } };
+}
+
+// 서버사이드 렌더링 = getServerSideProps()

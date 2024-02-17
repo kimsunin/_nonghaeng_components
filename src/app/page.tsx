@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/header/Header";
-import Footer from "@/components/Footer";
 import CheckBox from "@/components/CheckBox";
 import section1_img from "../storage/img/home/main_section1.png";
 import more2 from "../storage/img/home/more2.png";
