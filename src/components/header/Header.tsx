@@ -11,6 +11,8 @@ import menu from "../../storage/img/menu.png";
 import axios from "axios";
 
 export default function Header(token) {
+  console.log(token);
+  console.log(localStorage.getItem("accessToken"));
   const router = useRouter();
 
   // 로그인 상태
@@ -162,5 +164,6 @@ export function getStaticProps() {
   const token = localStorage.getItem("accessToken");
   return { props: { token } };
 }
+// 위 함수가 컴포넌트 렌더링 전에 먼저 실행되고 컴포넌트는 props를 전달받으면스 렌더링됨
 
 // 서버사이드 렌더링 = getServerSideProps()

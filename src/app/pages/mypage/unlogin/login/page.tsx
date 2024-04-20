@@ -93,6 +93,8 @@ export default function Mypage() {
                 <Link href="/pages/mypage/unlogin/join">회원가입</Link>
                 <label className="border-[#5A5550]/70 mx-[5px] border-l-[2px]"></label>
                 <Link href="/pages/mypage/unlogin/findpass">비밀번호찾기</Link>
+                <label className="border-[#5A5550]/70 mx-[5px] border-l-[2px]"></label>
+                <Link href="/pages/mypage/unlogin/findid">아이디찾기</Link>
               </div>
             </div>
           </form>
